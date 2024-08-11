@@ -1,18 +1,38 @@
+/* this file to add CSS rules to all the routes in your application */
+
+
+
+/* Base styles are mostly normalized styles, like resetting some default browser styles */
 @tailwind base;
+
+/* Component classes include pre-designed, reusable classes like buttons, forms, or typography */
 @tailwind components;
+
+/* Utility classes are the core of Tailwind’s philosophy, offering low-level utility-first classes like  for padding,  for text alignment,  for background color, and so on */
 @tailwind utilities;
 
+
+
+
+
+
+
+/* customizing the appearance of  elements of type . */
+
+
+/* Rule 1: Remove Default Appearance for All Browsers */
 input[type='number'] {
-  -moz-appearance: textfield;
+  -moz-appearance: textfield; /*t forces the input element to behave like a normal text field (input[type="text"])*/
   appearance: textfield;
 }
 
+/* Rule 2: Remove Spin Buttons in WebKit Browsers (Chrome, Safari, etc.) */
 input[type='number']::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
+/* This is similar to the previous rule but targets the outer part of the spin button*/
 input[type='number']::-webkit-outer-spin-button {
-  -webkit-appearance: none;
+   -webkit-appearance: none; /* removes the default appearance, hiding the button */
   margin: 0;
 }

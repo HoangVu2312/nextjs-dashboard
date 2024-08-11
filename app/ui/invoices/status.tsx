@@ -4,6 +4,7 @@ import clsx from 'clsx';
 export default function InvoiceStatus({ status }: { status: string }) {
   return (
     <span
+    // clsx is a library that lets you toggle class names easilyclsx is a library that lets you toggle class names easily
       className={clsx(
         'inline-flex items-center rounded-full px-2 py-1 text-xs',
         {
